@@ -40,7 +40,7 @@
             await webcam.play();
             play = 1;
 
-            const URL = "./cyfry/";
+            const URL = "./cyfry2/";
             const modelURL = URL + "model.json";
             const metadataURL = URL + "metadata.json";
             model = await tmImage.load(modelURL, metadataURL);
@@ -53,9 +53,10 @@
 
         document.getElementById("stop").addEventListener("click", function () {
             webcam.stop();
+            play = 0;
             document.getElementById("camView").innerHTML = "";
             document.getElementById("predictions").innerHTML = "";
-            play = 0;
+           
 
         });
 
